@@ -1,0 +1,9 @@
+https://medium.com/travis-on-docker/how-to-run-dockerized-apps-on-heroku-and-its-pretty-great-76e07e610e22
+
+docker build -t helllogolang .
+docker run --rm -it -p 8080:8080  helllogolang
+
+
+heroku container:login
+heroku container:push web --app dockerhegolang
+heroku container:release web --app dockerhegolan
